@@ -1,0 +1,22 @@
+
+
+.container-fluid{
+    margin-top:50px;
+}
+
+.search-result-wrap{
+    height: 65vh;
+    width:100%;
+}
+
+::-webkit-scrollbar {
+    background: transparent;  /* optional: just make scrollbar invisible */
+    height: 40vh;
+    width: 100%;
+}
+
+.blackBottomLine{
+    border: 2px solid gray;
+    border-bottom: 1px solid black;
+    padding:10px
+}
