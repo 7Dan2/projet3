@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
+import { registerLocaleData } from '@angular/common';
+import localeFR from '@angular/common/locales/fr';
 
 import { HotTableModule } from "@handsontable/angular";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
@@ -113,7 +115,8 @@ const appRoutes: Routes =
     HttpClientModule,
     BrowserAnimationsModule,
     MaterialModule,
-    RouterModule.forRoot(
+    RouterModule.
+    forRoot(
       appRoutes,
       {
         enableTracing: true
