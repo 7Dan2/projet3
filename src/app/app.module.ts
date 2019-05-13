@@ -51,6 +51,7 @@ import { UserService } from './user.service';
 import { VerticalCompatPipe } from './pipes/vertical-compat.pipe';
 import { RemoveTwinsPipe } from './pipes/remove-twins.pipe';
 import { SelectAttributesPipe } from './pipes/select-attributes.pipe';
+import { TopbarComponent } from './topbar/topbar.component';
 
 
 
@@ -102,7 +103,8 @@ const appRoutes: Routes =
     RealTypeAcPipe,
     VerticalCompatPipe,
     RemoveTwinsPipe,
-    SelectAttributesPipe
+    SelectAttributesPipe,
+    TopbarComponent
     
   ],
   imports: [
