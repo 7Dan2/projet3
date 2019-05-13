@@ -1,15 +1,18 @@
 <div class="container-fluid mt-5 pl-4 pr-4">
-  <h1 class="text-center mb-5 border-bottom border-dark p-4">Nouveau Test</h1>
+
+  <h1 class="text-center mb-5 border-bottom border-dark ">Nouveau Test</h1>
 
   <!-- Toggle -->
   <div class="container-fluid" *ngIf="hasAccess == 'true'">
     <div class="container">
+      
       <div class="d-inline-block mr-2">
         <label class="switch">
           <input type="checkbox">
           <span class="slider round" (click)="switchBetweenOnGoingTestAndTest()"></span>
         </label>
       </div>
+
       <div class="d-inline-block">
         <span>Ajouter un test à lectures multiples</span>
       </div>
@@ -18,9 +21,9 @@
 
 
     <!-- Form for add a One shot Test -->
-    <div class="row justify-content-center mt-4" *ngIf="onGoingTestState">
-      <div class="col-2 border-right ">
-        <h3 class="mb-4 text-center column-title">Données Projet</h3>
+    <div class="row justify-content-center mt-1 " *ngIf="onGoingTestState">
+      <div class="col-3 border-right rounded hoverMe">
+        <h5 class="mt-1 text-center column-title rounded">Données Projet</h5>
         <form>
           <div class="form-group">
             <label for="typeAC">Type d'AC</label>
@@ -58,8 +61,9 @@
 
         </form>
       </div>
-      <div class="col-2 border-right">
-        <h3 class="mb-4 column-title text-center">Données AC</h3>
+
+      <div class="col-3 border-right rounded hoverMe">
+        <h5 class="mt-1 column-title text-center rounded">Données AC</h5>
         <form>
           <div class="form-group">
             <label for="codeAC">Code AC</label>
@@ -92,8 +96,8 @@
         </form>
       </div>
 
-      <div class="col-2 border-right">
-        <h3 class="mb-4 column-title text-center">Données Vrac</h3>
+      <div class="col-3 border-right rounded hoverMe">
+        <h5 class="mt-1 column-title text-center rounded">Données Vrac</h5>
         <form>
           <div class="form-group">
             <label for="vracName">Nom vrac</label>
@@ -110,8 +114,8 @@
         </form>
       </div>
 
-      <div class="col-2 border-right">
-        <h3 class="mb-4 column-title text-center">Fonctionnalités</h3>
+      <div class="col-3 border-right rounded hoverMe">
+        <h5 class="mt-1 column-title text-center rounded">Fonctionnalités</h5>
         <form>
           <div class="form-group">
             <label for="testFamily">Famille Test</label>
@@ -201,8 +205,8 @@
           <div class="form-group">
             <label for="derogation">Dérogation</label>
             <select class="form-control" name="derogation" id="derogation" [(ngModel)]="tmpTest.derogation">
-              <option value="true">True</option>
-              <option value="false">False</option>
+              <option value="true">Oui</option>
+              <option value="false">Non</option>
             </select>
           </div>
 
@@ -216,11 +220,11 @@
     </div>
 
 
-    <!-- Form for add an OnGoingTest -->
+    <!-- Form for add an Multiple OnGoingTest -->
 
     <div class="row justify-content-center mt-4" *ngIf="!onGoingTestState">
-      <div class="col-2 border-right ">
-        <h3 class="mb-4 text-center column-title">Données Projet</h3>
+      <div class="col-2 border-right rounded hoverMe">
+        <h5 class="mt-1 p-1 text-center column-title rounded">Données Projet</h5>
         <form>
           <div class="form-group">
             <label for="typeAC">Type d'AC</label>
@@ -258,8 +262,8 @@
 
         </form>
       </div>
-      <div class="col-2 border-right">
-        <h3 class="mb-4 column-title text-center">Données AC</h3>
+      <div class="col-2 border-right rounded hoverMe">
+        <h5 class="mt-1 p-1 column-title text-center rounded">Données AC</h5>
         <form>
           <div class="form-group">
             <label for="codeAC">Code AC</label>
@@ -292,8 +296,8 @@
         </form>
       </div>
 
-      <div class="col-2 border-right">
-        <h3 class="mb-4 column-title text-center">Données Vrac</h3>
+      <div class="col-2 border-right rounded hoverMe">
+        <h5 class="mt-1 p-1 column-title text-center rounded">Données Vrac</h5>
         <form>
           <div class="form-group">
             <label for="vracName">Nom vrac</label>
@@ -310,8 +314,8 @@
         </form>
       </div>
 
-      <div class="col-2 border-right">
-        <h3 class="mb-4 column-title text-center">Fonctionnalités</h3>
+      <div class="col-3 border-right rounded hoverMe">
+        <h5 class="mt-1 p-1 column-title text-center rounded">Fonctionnalités</h5>
         <form>
           <div class="form-group">
             <label for="testFamily">Famille Test</label>
@@ -380,47 +384,51 @@
         </form>
       </div>
 
-      <div class="col-2">
+      <div class="col-3 rounded hoverMe">
+          <h5 class="mt-1 p-1 column-title text-center rounded">Calendrier</h5>
         <form>
+
           <div class="form-group">
-            <h3 class="mb-4 column-title text-center">Calendrier</h3>
             <label for="ReceptionVrac">Réception vrac</label>
             <input type="date" class="form-control" id="ReceptionVrac" name="ReceptionVrac" placeholder="" [(ngModel)]="onGoingTest.receptionVrac">
           </div>
+
           <div class="form-group">
             <label for="ReceptionZAC">Réception ZAC</label>
             <input type="date" class="form-control" id="ReceptionZAC" name="ReceptionZAC" placeholder="" [(ngModel)]="onGoingTest.receptionZAC">
           </div>
-          <div class="form-group">
-            <label for="DebutReel">Date de début réelle</label>
-            <input type="date" class="form-control" id="DebutReel" name="DebutReel" placeholder="" [(ngModel)]="onGoingTest.debutReel">
-          </div>
-          <div class="form-group">
 
-            <label for="DebutPrevu">Date de début prévue</label>
-            <input type="date" class="form-control" id="DebutPrevu" name="DebutPrevu" placeholder="" [(ngModel)]="onGoingTest.debutPrevu">
-          </div>
           <div class="form-group">
-            <label for="T1prevu">Date T1 prévue</label>
-            <input type="date" class="form-control" id="T1prevu" name="T1prevu" placeholder="" [(ngModel)]="onGoingTest.t1Prevu">
+            <label for="DebutReel">Date/heure de début réelle</label>
+            <input type="datetime-local" class="form-control" id="DebutReel" name="DebutReel" placeholder="" [(ngModel)]="onGoingTest.debutReel">
           </div>
+
           <div class="form-group">
-            <label for="t2Prevu">Date T2 prévue</label>
-            <input type="date" class="form-control" id="t2Prevu" name="t2Prevu" placeholder="" [(ngModel)]="onGoingTest.t2Prevu">
+            <label for="DebutPrevu">Date/heure de début prévue</label>
+            <input type="datetime-local" class="form-control" id="DebutPrevu" name="DebutPrevu" placeholder="" [(ngModel)]="onGoingTest.debutPrevu">
           </div>
+
           <div class="form-group">
-            <label for="t3Prevu">Date T3 prévue</label>
-            <input type="date" class="form-control" id="t3Prevu" name="t3Prevu" placeholder="" [(ngModel)]="onGoingTest.t3Prevu">
+            <label for="T1prevu">Date/heure T1 prévue</label>
+            <input type="datetime-local" class="form-control" id="T1prevu" name="T1prevu" placeholder="" [(ngModel)]="onGoingTest.t1Prevu">
+          </div>
+
+          <div class="form-group">
+            <label for="t2Prevu">Date/heure T2 prévue</label>
+            <input type="datetime-local" class="form-control" id="t2Prevu" name="t2Prevu" placeholder="" [(ngModel)]="onGoingTest.t2Prevu">
+          </div>
+
+          <div class="form-group">
+            <label for="t3Prevu">Date/heure T3 prévue</label>
+            <input type="datetime-local" class="form-control" id="t3Prevu" name="t3Prevu" placeholder="" [(ngModel)]="onGoingTest.t3Prevu">
           </div>
         </form>
       </div>
 
     </div>
 
-
-
     <div class="row justify-content-center mb-5 mt-5">
-      <button type="button" class="btn btn-dark col-3 font-weight-bold rounded-0 validate-button" (click)="save()">Valider</button>
+      <button type="button" class="btn btn-dark col-3 font-weight-bold rounded validate-button" (click)="save()">Valider</button>
     </div>
 
   </div>

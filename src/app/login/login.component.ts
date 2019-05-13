@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BigService } from '../big.service';
 import { User } from '../user';
+import { MaterialModule } from '../material/material.module';
 
 @Component({
   selector: 'app-login',
@@ -30,6 +31,7 @@ export class LoginComponent implements OnInit {
   public loginCheck() {
     if (this.userLog.identifiant == "guerlainhomolog" && this.userLog.password == "jetravaillechezguerlain") {
       sessionStorage.setItem("hasAccess", "true");
+      alert('vous êtes connecté');
     } else {
       sessionStorage.setItem("hasAccess", "false");
       this.dislayWrongConnectionMessage = true;
