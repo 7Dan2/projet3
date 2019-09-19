@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-search-page',
@@ -32,9 +32,17 @@ export class SearchPageComponent implements OnInit {
   @Input() public testFamily: string = "";
   @Input() public derogation: string = "";
 
-  constructor() { }
+  public testId;
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
+    //let id = parseInt(this.route.snapshot.paramMap.get('id'));
+    //this.testId = id;
+    /*this.route.paramMap.subscribe((params: ParamMap) => {
+      let id = parseInt(params.get('id'))
+      this.testId = id;
+    })
+    */
   }
 
   public onSearchBarContentChanged(param: string) {

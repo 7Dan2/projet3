@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Compat } from '../compat';
+import { Compat } from '../services/compat';
 
 @Pipe({
   name: 'colorMatPrem'
@@ -45,12 +45,12 @@ export class ColorMatPremPipe implements PipeTransform {
         yellowCounter++;
       }
 
-      //ethanol96
-      if (value[i].ethanol96 == 10) {
+      //ethanol_96
+      if (value[i].ethanol_96 == 10) {
         redCounter++;
-      } else if (value[i].ethanol96 == 20) {
+      } else if (value[i].ethanol_96 == 20) {
         orangeCounter++;
-      } else if (value[i].ethanol96 == 30) {
+      } else if (value[i].ethanol_96 == 30) {
         yellowCounter++;
       }
 

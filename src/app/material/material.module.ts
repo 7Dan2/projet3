@@ -4,14 +4,20 @@ import
 {
   MatButtonModule, 
   MatFormFieldModule, 
-  MatInputModule 
+  MatInputModule,
+  MatTabsModule,
+  MatMenuModule,
+  MatIconModule
 } 
 from '@angular/material';
 
 const MaterialComponents = [
   MatButtonModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatTabsModule,
+  MatMenuModule,
+  MatIconModule
 
 ]
 

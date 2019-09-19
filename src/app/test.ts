@@ -23,6 +23,7 @@ export class Test {
 
     public testFamily:string = "";
     public test:string = "";
+    public testType: string = "";
     public start:string = "";
     public result:string = "";
     public derogation:string = "";

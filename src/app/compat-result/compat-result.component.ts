@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CompatService } from '../compat.service';
+import { CompatService } from '../services/compat.service';
 import { Observable } from 'rxjs';
-import { Compat } from '../compat';
+import { Compat } from '../services/compat';
 
 @Component({
   selector: 'app-compat-result',

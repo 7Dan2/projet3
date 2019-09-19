@@ -1,42 +1,51 @@
-.wrap-all{
+.wrap-all
+{
     overflow-x: scroll;
     height: 78vh;
 }
 
-.line-result{
+.line-result
+{
     height:24vh;
 }
 
 /* Block rules  */
 
-.red{
-    background-color: rgb(233, 93, 93);
+.red
+{
+    background-color: rgb(233, 93, 93)
 }
 
-.orange{
-    background-color: rgb(235, 177, 69);
+.orange
+{
+    background-color: rgb(235, 177, 69)
 }
 
-.yellow{
-    background-color: rgb(230, 230, 109);
+.yellow
+{
+    background-color: rgb(230, 230, 109)
 }
 
-.green{
-    background-color: rgb(114, 219, 114);
+.green
+{
+    background-color: rgb(114, 219, 114)
 }
 
-.line-header, .compatibility-block{
+.line-header, .compatibility-block
+{
     border : 1px solid black;
     height: 8vh;
     width: 150%;
-    font-size: 1.2em;
+    font-size: 1em
 }
 
-.block-title{
+.block-title
+{
     padding-top: 10%
 }
 
-.line-header-title{
+.line-header-title
+{
     padding-top: 5%
 }
 

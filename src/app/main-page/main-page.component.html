@@ -1,0 +1,71 @@
+  <!-- Tout ce composant est en Grid CSS et Material -->
+  <!--<div class="topContainer">
+    <div>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>perm_identity</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>home</mat-icon>
+          <span [routerLink]="['/loginPage']" routerLinkActive="router-link-active">Page de login</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>settings_power</mat-icon>
+          <span (click)="logOut()">Déconnexion</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>restore_page</mat-icon>
+          <span [routerLink]="['/mainPage']" routerLinkActive="active">Page principale</span>
+        </button>
+      </mat-menu>
+    </div>
+    
+    <div>
+      <p>Date et heure ici</p>
+    </div>
+
+    <div>
+      <p>Autres bidouilles</p>
+    </div>
+  </div>
+  
+  <hr/>
+-->
+<app-top-menu-bar></app-top-menu-bar>
+<div class="wrapper">
+
+  <div class="links">
+    <a [routerLink]="['/searchPage']" [routerLinkActive]="['active']">RECHERCHE DE TESTS</a>
+  </div>
+  
+  <div class="linksTestEnCours">
+    <a [routerLink]="['/ongoingtestPage']" [routerLinkActive]="['active']">TESTS EN COURS</a>
+  </div>
+    
+  <div class="links">
+    <a [routerLink]="['/newtestPage']" [routerLinkActive]="['active']">AJOUT D'UN NOUVEAU TEST</a>
+  </div>
+
+</div>
+<!--
+<div class="displayPage">
+  <div>
+      <li (click)="onSelect(test)" *ngFor="let test of tests" >{{test.id}}&nbsp;/&nbsp;{{test.name}}</li>
+  </div>
+-->
+
+  
+      
+ <!--<div class="col-2 offset-1 d-inline-block align-top">
+        <button class="col-12 loginBtn align-top" [routerLink]="['/loginPage']" routerLinkActive="router-link-active" *ngIf="isConnected != 'true' " (click)="changeLoginColor()">Connexion</button>
+        <button class="col-12 loginBtn align-top" (click)="logOut()" *ngIf="isConnected == 'true'">Déconnexion</button>
+      </div>-->
+      
+
+      
+    
+      
+    
+      
+  
+  

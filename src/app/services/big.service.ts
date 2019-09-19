@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Test } from './test';
-import { OnGoingTest } from './on-going-test';
-import { User } from './user';
-import { TestFamily } from './test-family';
+import { Test } from '../test';
+import { OnGoingTest } from '../on-going-test';
+//import { User } from './user'; transféré dans authentication.service
+import { TestFamily } from '../test-family';
 
 
 @Injectable({
@@ -13,7 +13,7 @@ import { TestFamily } from './test-family';
 })
 export class BigService {
 
-  private baseUrl = 'http://localhost:8080/api';
+  private baseUrl = '192.168.0.3:8081/api';
   private http: HttpClient;
 
   constructor(http: HttpClient) {
@@ -141,10 +141,12 @@ export class BigService {
     return str.toLowerCase();
   }
 
+  /*
+  //Authentication
   public isAllowed(p_user:User){
     return this.http.post(`${this.baseUrl}/users/login`, p_user);
   }
-
+  */
   //method to get all test types and families
   public getTestFamilies(){
     return this.http.get(this.baseUrl + "/testFamily").pipe(

@@ -4,19 +4,20 @@
 
     <!-- Search Bar -->
 
-    <form class="becomeSticky">
+    <form class="becomeSticky" id="recherche">
       <p class="mt-0 bold">RECHERCHE</p>
       <div class="form-group">
         <hr/>
         <input class="form-control gray" name="searchBar" id="searchBar" aria-describedby="searchBar" (keyup)="onKeyUp();"
-          placeholder="Saisissez votre recherche" [(ngModel)]="searchBarContent" autocomplete="off">
+          placeholder="Saisissez votre recherche" [(ngModel)]="searchBarContent" autocomplete="off" autofocus>
       </div>
     </form>
 
     <!-- Filters -->
 
     <div class="filter-container mt-5">
-      <p>FILTRES</p>
+      <p class="mt-0 bold">FILTRES</p>
+    
       <hr />
 
       <form>
@@ -134,16 +135,16 @@
         </div>
         <div class="form-group">
           <label for="materiau">Famille de test</label>
-          <select class="form-control" [(ngModel)]="testFamily" (change)="testFamilyEmission();" [ngModelOptions]="{standalone: true}">
+          <select class="form-control" [(ngModel)]="testFamily" (change)="testFamilyEmission()" [ngModelOptions]="{standalone: true}">
             <option selected></option>
             <option *ngFor="let current of families" value="{{current.family}}">{{current.family}}</option>
           </select>
           
           <!-- <input type="text" class="form-control" [(ngModel)]="testFamily" (keyup)="testFamilyEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Famille de tests"> -->
         </div>
-        <div class="form-group">
+        <!--<div class="form-group">
           <label for="test">Nom du test</label>
-          <select class="form-control" [(ngModel)]="testType" (change)="onKeyUpTestType()" [ngModelOptions]="{standalone: true}">
+            <select class="form-control" [(ngModel)]="testType" (change)="onKeyUpTestType()" [ngModelOptions]="{standalone: true}">
             <option selected></option>
             <ng-container *ngFor="let current of families[0].testType">
               <option value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
@@ -155,8 +156,8 @@
               <option value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
             </ng-container>
           </select>
-          <!-- <input type="text" class="form-control" [(ngModel)]="testType" (keyup)="onKeyUpTestType();" name="test" id="test" aria-describedby="helpId" placeholder="Test"> -->
-        </div>
+          <input type="text" class="form-control" [(ngModel)]="testType" (keyup)="onKeyUpTestType();" name="test" id="test" aria-describedby="helpId" placeholder="Test">
+        </div>-->
 
         <div class="form-group">
           <label for="datesApres">Tests effectués après le :</label>

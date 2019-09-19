@@ -1,0 +1,30 @@
+[{
+    "Users":
+    [
+        {
+            "ID": "1",
+            "nom": "QCP1",
+            "mdp": "QCP1"
+        },
+        {
+            "ID": "2",
+            "nom": "QCP2",
+            "mdp": "QCP2"
+        },
+        {
+            "ID": "3",
+            "nom": "QCP3",
+            "mdp": "QCP3"
+        }
+    ]
+},
+{
+    "Admins":
+    [
+        {
+            "ID": "11",
+            "nom": "admin1",
+            "mdp": "Admin1"
+        }
+    ]
+}]

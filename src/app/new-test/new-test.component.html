@@ -1,12 +1,18 @@
 <div class="container-fluid mt-5 pl-4 pr-4">
 
-  <h1 class="text-center mb-5 border-bottom border-dark ">Nouveau Test</h1>
+  <!--><h1 class="text-center mb-5 border-bottom border-dark ">Nouveau Test</h1>-->
 
   <!-- Toggle -->
+  <div class="text-center not-allowed-text" *ngIf="hasAccess != 'true'">
+    <div>Vous n'avez pas les droits d'accès à l'interface d'ajout de nouveaux tests.</div>
+  </div>
+
   <div class="container-fluid" *ngIf="hasAccess == 'true'">
     <div class="container">
       
       <div class="d-inline-block mr-2">
+          
+
         <label class="switch">
           <input type="checkbox">
           <span class="slider round" (click)="switchBetweenOnGoingTestAndTest()"></span>
@@ -27,7 +33,7 @@
         <form>
           <div class="form-group">
             <label for="typeAC">Type d'AC</label>
-            <input type="text" class="form-control" id="typeAC" name="typeAC" placeholder="" [(ngModel)]="tmpTest.typeAC">
+            <input type="text" class="form-control" id="typeAC" name="typeAC" placeholder="" [(ngModel)]="tmpTest.typeAC" autofocus>
           </div>
 
           <div class="form-group">
@@ -219,16 +225,16 @@
 
     </div>
 
-
+<!-- ############################################################################ -->
     <!-- Form for add an Multiple OnGoingTest -->
 
-    <div class="row justify-content-center mt-4" *ngIf="!onGoingTestState">
+    <div class="row justify-content-center mt-1" *ngIf="!onGoingTestState">
       <div class="col-2 border-right rounded hoverMe">
         <h5 class="mt-1 p-1 text-center column-title rounded">Données Projet</h5>
         <form>
           <div class="form-group">
             <label for="typeAC">Type d'AC</label>
-            <input type="text" class="form-control" id="typeAC" name="typeAC" placeholder="" [(ngModel)]="onGoingTest.typeAC">
+            <input type="text" class="form-control" id="typeAC" name="typeAC" placeholder="" [(ngModel)]="onGoingTest.typeAC" autofocus>
           </div>
 
           <div class="form-group">
@@ -433,7 +439,5 @@
 
   </div>
 
-  <div class="text-center not-allowed-text" *ngIf="hasAccess != 'true'">
-    <div>Vous n'avez pas les droits d'accès à l'interface d'ajout de nouveaux tests.</div>
-  </div>
+  
 </div>

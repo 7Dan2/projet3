@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   //function that changes the "Rechercher" tab's color when you click on it
-  public changeResearchColor() {
+  /*public changeResearchColor() {
     if (document.getElementById('research-button').style.color != "white") {
     document.getElementById('research-button').style.color = "white";
     document.getElementById('research-button').style.backgroundColor = "black";
@@ -24,9 +24,9 @@ export class HeaderComponent implements OnInit {
     document.getElementById('new-test-button').style.backgroundColor = "white";
     }
   }
-  
+  */
   //function that changes the "Tests en cours" tab's color when you click on it
-  public changeOngoingTestColor() {
+  /*public changeOngoingTestColor() {
     if (document.getElementById('ongoing-tests-button').style.color != "white") {
     document.getElementById('ongoing-tests-button').style.color = "white";
     document.getElementById('ongoing-tests-button').style.backgroundColor = "black";
@@ -38,7 +38,8 @@ export class HeaderComponent implements OnInit {
     document.getElementById('new-test-button').style.backgroundColor = "white";
     }
   }
-
+*/
+/*
   //function that changes the "Ajouter un nouveau test" tab's color when you click on it
   public changeNewTestColor() {
     if (document.getElementById('new-test-button').style.color != "white") {
@@ -52,7 +53,8 @@ export class HeaderComponent implements OnInit {
     document.getElementById('research-button').style.backgroundColor = "white";
     }
   }
-
+*/
+/*
   public changeLoginColor() {
     document.getElementById('new-test-button').style.color = "black";
     document.getElementById('new-test-button').style.backgroundColor = "white";
@@ -63,7 +65,8 @@ export class HeaderComponent implements OnInit {
     document.getElementById('research-button').style.color = "black";
     document.getElementById('research-button').style.backgroundColor = "white";
   }
-  
+*/  
+/*
   public colorButtonBasedOnUrl(){
     if (window.location.toString().toLowerCase().indexOf("ongoingtestpage")>-1){
       this.changeOngoingTestColor();
@@ -76,7 +79,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-
+*/
   public logOut(){
     sessionStorage.setItem("hasAccess", "false");
     alert(`Vous avez été déconnecté.`);
@@ -85,7 +88,7 @@ export class HeaderComponent implements OnInit {
   
 
   ngOnInit() {
-    this.colorButtonBasedOnUrl();
+    //this.colorButtonBasedOnUrl();
     this.isConnected = sessionStorage.getItem("hasAccess");
   }
 

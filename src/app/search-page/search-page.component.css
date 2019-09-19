@@ -2,6 +2,7 @@
 
 .container-fluid{
     margin-top:50px;
+    border-radius: 5px;
 }
 
 .search-result-wrap{

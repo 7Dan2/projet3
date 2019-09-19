@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OnGoingTest } from '../on-going-test';
-import { BigService } from '../big.service';
+import { BigService } from '../services/big.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Route } from '@angular/compiler/src/core';
 import { Router, UrlTree } from '@angular/router';

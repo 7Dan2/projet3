@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Test } from '../test';
-import { BigService } from '../big.service';
+import { BigService } from '../services/big.service';
 import * as Handsontable from "handsontable";
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { TestFamily } from '../test-family';

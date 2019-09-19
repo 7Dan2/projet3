@@ -1,6 +1,7 @@
 .column-title {
     background-color: rgb(48, 48, 48);
     color: white;
+    font-family: 'Antic Didone', serif;
     padding-top: 3px;
     padding-bottom: 5px;
     border-radius: 2px;
@@ -47,7 +48,7 @@
   }
   
   input:checked + .slider {
-    background-color: #BF1F6B;
+    background-color: #CC0066;
   }
   
   input:focus + .slider {
@@ -84,4 +85,8 @@
 
   .hoverMe:hover{
   background-color: lightgrey;
+  }
+
+  h1{
+    font-family: 'Antic Didone', serif;
   }

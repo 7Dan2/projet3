@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Compat } from '../compat';
+import { Compat } from '../services/compat';
 
 @Pipe({
   name: 'removeTwins'

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BigService } from '../big.service';
+import { BigService } from '../services/big.service';
 import { OnGoingTest } from '../on-going-test';
 
 

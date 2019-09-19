@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OnGoingTest } from '../on-going-test';
-import { BigService } from '../big.service';
+import { BigService } from '../services/big.service';
 import { Test } from '../test';
 import { TestFamily } from '../test-family';
 
@@ -16,9 +16,9 @@ export class NewTestComponent implements OnInit {
   public hasAccess: string;
   public families: TestFamily[] = [];
   public familyName: string;
-  public isFirstFamily: boolean = false;
-  public isSecondFamily: boolean = false;
-  public isThirdFamily: boolean = false;
+  public isCompatFamily: boolean = false;
+  public isDecorFamily: boolean = false;
+  public isFonctionFamily: boolean = false;
 
 
   // Var for choosing the result between C, MC & NC 
@@ -97,19 +97,19 @@ export class NewTestComponent implements OnInit {
     this.familyName = select.value;
     this.onGoingTest.testFamily = select.value;
     if (this.familyName == 'Compatibilité') {
-      this.isFirstFamily = true;
-      this.isSecondFamily = false;
-      this.isThirdFamily = false;
+      this.isCompatFamily = true;
+      this.isDecorFamily = false;
+      this.isFonctionFamily = false;
     }
     if (this.familyName == 'Décor') {
-      this.isFirstFamily = false;
-      this.isSecondFamily = true;
-      this.isThirdFamily = false;
+      this.isCompatFamily = false;
+      this.isDecorFamily = true;
+      this.isFonctionFamily = false;
     }
     if (this.familyName == 'Fonctionnalité') {
-      this.isFirstFamily = false;
-      this.isSecondFamily = false;
-      this.isThirdFamily = true;
+      this.isCompatFamily = false;
+      this.isDecorFamily = false;
+      this.isFonctionFamily = true;
     }
   }
 
@@ -118,19 +118,19 @@ export class NewTestComponent implements OnInit {
     this.familyName = select.value;
     this.tmpTest.testFamily = select.value;
     if (this.familyName == 'Compatibilité') {
-      this.isFirstFamily = true;
-      this.isSecondFamily = false;
-      this.isThirdFamily = false;
+      this.isCompatFamily = true;
+      this.isDecorFamily = false;
+      this.isFonctionFamily = false;
     }
     if (this.familyName == 'Décor') {
-      this.isFirstFamily = false;
-      this.isSecondFamily = true;
-      this.isThirdFamily = false;
+      this.isCompatFamily = false;
+      this.isDecorFamily = true;
+      this.isFonctionFamily = false;
     }
     if (this.familyName == 'Fonctionnalité') {
-      this.isFirstFamily = false;
-      this.isSecondFamily = false;
-      this.isThirdFamily = true;
+      this.isCompatFamily = false;
+      this.isDecorFamily = false;
+      this.isFonctionFamily = true;
     }
   }
 

@@ -1,4 +1,31 @@
-input{
-    width: 15%;
-    margin-left: 42.5%
+#validButton
+{
+    width: 14%;
+    margin: 10px;
+    background-color: goldenrod;
+    transition: background-color 3000ms ease-in-out;
+    transition: border-radius 1000ms ease-in-out;
+
+    transform: rotateY(0deg);
+    animation: rotate 5s;
+    color: white;
+}
+
+@keyframes rotate
+{
+    to
+    {
+        transform: rotateY(360deg);
+    }
+}
+
+#validButton:hover
+{    
+    background-color: #CC0066;
+    border-radius: 20px;
+}
+
+input
+{
+    font-size: 1.2em;
 }

@@ -1,0 +1,14 @@
+.bgImg {
+    position: relative;
+    object-fit: contain;
+}
+ .bgImg > img {
+    width: 100%;
+    height: 100%;
+}
+
+.notFoundMsg {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}

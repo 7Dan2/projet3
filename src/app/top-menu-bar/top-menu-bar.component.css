@@ -1,0 +1,65 @@
+* 
+{
+    box-sizing: border-box;
+    font-family: 'Antic Didone', serif;
+}
+
+.menuContainer
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    vertical-align: middle;
+    height: auto;
+    margin-bottom: 0.1%;
+}
+
+.menuContainer > * 
+{
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid black;
+}
+
+#dateHeure
+{
+    color: white;
+    background-color: grey;
+    text-align: center;
+    
+    
+}
+
+
+a
+{
+    color: black;
+    background-color: white;
+    transition: background-color 500ms ease-in-out;
+    text-decoration: none;
+    font-family: 'Antic Didone', serif;
+    text-align: center;
+    font-size: 1.2em;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: .5em;
+}
+
+#logOut
+{
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+}
+
+#logOut:hover
+{
+    background-color: red;
+    cursor: pointer;
+}
+
+
+
+
+
+

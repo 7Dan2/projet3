@@ -1,7 +1,4 @@
-#header-image {
-    /* background-color: rgb(239, 239, 239); */
-    background-color: white;
-}
+
 
 .nav-bar-button,
 .logo-container {
@@ -46,6 +43,14 @@
 }
 
 .loginBtn{
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1px;
+}
+.loginBtn:hover{
     color:white;
     background-color: black;
+    border-radius: 25px;
+    padding: 2px;
 }

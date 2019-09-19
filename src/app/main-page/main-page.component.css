@@ -1,0 +1,75 @@
+* 
+{
+    box-sizing: border-box;
+}
+
+.wrapper
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    vertical-align: middle;
+    max-height: 2em;
+}
+
+.wrapper > *
+{
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid black;
+}
+
+#research-button,
+#ongoing-tests-button,
+#new-test-button 
+{
+    background-color: white;
+    transition: background-color 500ms ease-in-out;
+    color: grey;
+}
+
+#research-button:hover,
+#ongoing-tests-button:hover,
+#new-test-button:hover
+{
+    cursor: pointer;
+    background-color: grey;
+    color: white;
+}
+
+a
+{
+    color: black;
+    background-color: white;
+    transition: background-color 500ms ease-in-out;
+    text-decoration: none;
+    font-family: 'Antic Didone', serif;
+    text-align: center;
+    font-size: 1.5em;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: .5em;
+}
+
+a.active
+{
+    background-color: #CC0066;
+    color: white;
+}
+
+a:hover
+{
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}
+
+.displayPage > li
+{
+    display: inline-block;
+    color: black;
+    background-color: white;
+    transition: background-color 500ms ease-in-out;
+}
+

@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Compat } from '../compat';
+import { Compat } from '../services/compat';
 
 @Pipe({
   name: 'verticalCompat'
@@ -80,12 +80,12 @@ export class VerticalCompatPipe implements PipeTransform {
       }
       }
 
-      if ("ethanol96".indexOf(splitParam[l].toLowerCase()) > -1
-      || "ethanol 96".indexOf(splitParam[l].toLowerCase()) > -1) {
+      if ("ethanol_96".indexOf(splitParam[l].toLowerCase()) > -1
+      || "ethanol_96".indexOf(splitParam[l].toLowerCase()) > -1) {
         k=0;
       while(k<result.length) {
         for (i=0; i<result.length-1; i++) {
-          if (result[i].ethanol96 > result[i+1].ethanol96) {
+          if (result[i].ethanol_96 > result[i+1].ethanol_96) {
             let temp = result[i];
             result[i] = result[i+1];
             result[i+1] = temp;

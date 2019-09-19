@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { BigService } from '../big.service';
+import { BigService } from '../services/big.service';
 import { TestFamily } from '../test-family';
 
 

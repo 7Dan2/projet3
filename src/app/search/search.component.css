@@ -7,9 +7,11 @@ form {
   color: white;
 }
 
-.wrapper {
+.wrapper, form{
   border: 1px solid black;
-  padding: 50px;
+  border-radius: 9px;
+  padding: 20px;
+  background-color: whitesmoke;
 }
 
 .container-fluid {
@@ -71,3 +73,8 @@ form.becomeSticky{
     color: rgb(116, 116, 116);
     opacity: 1; /* Firefox */
   }
+#recherche{
+  /*C'est censé être couleur miel*/
+  background-color: rgba(245, 211, 100, 0.8);
+  border-radius: 9px;
+}
